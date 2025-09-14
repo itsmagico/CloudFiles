@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudFiles - Download</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-cloud"></i> CloudFiles</h1>
+    <nav>
+      <a href="{{ url_for('index') }}">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Suporte</a>
+      <a href="#">Entrar</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="min-height: 50vh;">
+    <h2>Pronto para baixar seu arquivo</h2>
+    <p>Arquivo: <strong>{{ filename }}</strong></p>
+    <a href="{{ download_url }}" class="btn"><i class="fas fa-download"></i> Baixar</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CloudFiles. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
