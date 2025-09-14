@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudFiles - Hospedagem de Arquivos</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <h1><i class="fas fa-cloud-upload-alt"></i> Upload de Arquivos</h1>
+
+  <div class="circle" id="uploadCircle">
+    <i class="fas fa-upload" id="uploadIcon"></i>
+    <div class="progress" id="progress"></div>
+  </div>
+
+  <input type="file" id="fileInput">
+  <p id="status">Clique no círculo para selecionar um arquivo</p>
+
+  <div class="link-box" id="linkBox">
+    <span id="fileLink"></span>
+    <button class="copy-btn" id="copyBtn"><i class="fas fa-copy"></i></button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</body>
+</html>
